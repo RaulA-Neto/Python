@@ -13,7 +13,11 @@ class Pilha:
         self.items.append(valor)
         
     def desempilhar(self):
-        return self.items.pop()
+        if self.items != []:
+            return self.items.pop()
+        else:
+            print("Lista vazia!")
+            return ''
     
     def tamanho(self):
         return len(self.items)
@@ -28,10 +32,16 @@ class Pilha:
         for items in self.items[::-1]:
             print(items)
             
+    def mostraTopo(self):
+        return self.items[-1]
+            
 p = Pilha()
 p.empilhar(4)
 p.empilhar('gato')
 p.empilhar(3.1415)
+print (p.mostraTopo())
+
+'''
 print(p.vazia()) 
 print(p.mostra())
 item = p.desempilhar()  
@@ -40,6 +50,8 @@ item = p.desempilhar()
 print(item)
 item = p.desempilhar()  
 print(item)
+item = p.desempilhar()  
+print(item)
 print(p.vazia()) 
-        
+'''     
         
